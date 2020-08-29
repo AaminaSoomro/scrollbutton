@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Scroll Button</title>
+    <style>
+section {
+    width: 100%;
+    height: 100vh;
+    background: url(https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-1.2.1&w=1000&q=80);
+    background-size: cover;
+}
+#topBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-size: 22px;
+    width: 50px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <section>
+    <div class="container">
+        <h1>Reading</h1>
+        <h2>Read to Grow Read to Know</h2>
+        <p>Reading is one of the most important and best habits one can inculcate. Those who have the habit of reading are actually the ones who can really understand the value and pleasure of reading. There are very few who are aware of the advantages of reading good books.
+            Importance of Good Reading Habits
+            Reading habits develop vivid imagination, knowledge and vocabulary. Here are some points describing importance of good reading habits:
+            The most important reason of reading is that we gain knowledge. Books are a rich source of information and knowledge. Reading books on diverse genres imparts information and gives you a deep insight of to the topic you read about. You always learn something new when you read.
+            It is a proven fact that those who have good reading habit show signs of higher intelligence. With diverse and bountiful genres books open up the mind and enhance the creative ability and language skills.
+            Reading fiction develops empathy and helps build better relations with others. You become a part of the story and naturally empathize and sympathize with characters. You become more aware about how people get affected in different situations. It enhances your overall ability to empathize with others.
+            Good reading also inspires you to write. Many writers get inspired and gain expertise by reading more and more. You learn the art of using language and enjoy playing with words.
+            Reading is also a kind of motivation that works wonders in when it comes to de-stressing. Reading motivational books can really change our life for better. Reading autobiographies can also encourage us to work hard and stay dedicated to achieve our goals. It helps us become a better person in life.</p>
+           <h2> Conclusion</h2>
+            <p>There are many perks of good reading habits. It keeps your mind active, strong and healthy. Reading is important for your overall personal growth and development. Besides, you never feel bored or lonely if you develop good reading habits.When we read, not only are we improving memory and empathy, but research has shown that it makes us feel better and more positive too. Science has shown that reading has some amazing health benefits, including helping with depression, cutting stress, and reducing the chances of developing Alzheimer’s later in life.</p>
+    </div>
+    <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
+</section>
+
+
+    <script>
+        $(document).ready(function(){
+
+$(window).scroll(function(){
+    if($(this).scrollTop() > 40){
+        $('#topBtn').fadIn();
+    } else{
+        $('#topBtn').fadOut();
+    }
+});
+
+$("#topBtn").click(function(){
+$('html ,body').animate({scrollTop :0},800)
+});
+});
+    </script>
+</body>
+</html>
